@@ -1,0 +1,70 @@
+package customerOrderSystem;
+
+import java.util.ArrayList;
+
+public class Order {
+
+	// MEMBER VARIABLES
+	private String name;
+	private boolean ready;
+	private ArrayList<Item> items;
+	
+	// CONSTRUCTOR
+	public Order() {
+		this.name = "Guest";
+		this.items = new ArrayList<Item>();
+	}
+	public Order(String name) {
+		this.name = name;
+		this.items = new ArrayList<Item>();
+	}
+	
+	// GETTERS & SETTERS
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public boolean isReady() {
+		return ready;
+	}
+    public void setReady(boolean ready) {
+  		this.ready = ready;
+  	}
+    public ArrayList<Item> getItems() {
+		return items;
+	}
+    public void setItem(ArrayList<Item> items) {
+		this.items = items;
+	}
+    
+    // METHODS
+    public void addItem(Item item) {
+		this.items.add(item);
+	}
+    public void getStatusMessage() {
+		if (isReady()) {
+			System.out.println("Your order is ready.");
+			this.setReady(true);
+		}else {
+			System.out.println("Thank you for waiting. Your order will be rady soon.");
+		}
+	}
+    public double getOrderTotal() {
+		double total = 0;
+    	
+		for (Item item : items) {
+			total += item.getPrice();
+		}
+		
+		return total;
+	}
+    public void display() {
+		System.out.printf("\nCustomer name: %s\n", this.name);
+		
+		for (Item item : items) {
+			System.out.printf("%s - $%s\n", item.getName(), item.getPrice());
+		}
+	}
+}

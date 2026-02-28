@@ -1,0 +1,80 @@
+package studentEnrollmentSystem;
+
+import java.util.ArrayList;
+
+public class TestSchool {
+
+	public static void main(String[] args) {
+		
+		//Courses
+		Course course1 = new Course();
+		course1.courseName = "Introduction to Java";
+		course1.courseCode = "CS101";
+		course1.units = 3;
+		
+		Course course2 = new Course();
+		course2.courseName = "Database Systems";
+		course2.courseCode = "CS202";
+		course2.units = 4;
+		
+		Course course3 = new Course();
+		course3.courseName = "Web Development";
+		course3.courseCode = "CS303";
+		course3.units = 3;
+		
+		Course course4 = new Course();
+		course4.courseName = "Mobile App Development";
+		course4.courseCode = "CS404";
+		course4.units = 4;
+		
+		//Students
+		Student student1 = new Student();
+		student1.name = "Alice";
+		student1.age = 19;
+		student1.courses = new ArrayList<Course>();
+		student1.courses.add(course1);
+		student1.courses.add(course3);
+		
+		System.out.printf("%s is currently enrolled in: \n", student1.name);
+		for (Course course : student1.courses) {
+		    // We use the 'course' variable defined in the loop header
+		    System.out.println("- " + course.courseName);
+		}
+		
+		Student student2 = new Student();
+		student2.name = "Bob";
+		student2.age = 20;
+		student2.courses = new ArrayList<Course>();
+		student2.courses.add(course2);
+		student2.courses.add(course4);
+		
+		System.out.printf("\n%s is currently enrolled in: \n", student2.name);
+		for (Course course : student2.courses) {
+		    // We use the 'course' variable defined in the loop header
+		    System.out.println("- " + course.courseName);
+		}
+		
+		Student student3 = new Student();
+		student3.name = "Bob";
+		student3.age = 20;
+		student3.courses = new ArrayList<Course>();
+		student3.courses.add(course1);
+		student3.courses.add(course2);
+		student3.courses.add(course3);
+		student3.courses.add(course4);
+		
+		System.out.printf("\n%s is currently enrolled in: \n", student3.name);
+		for (Course course : student3.courses) {
+		    // We use the 'course' variable defined in the loop header
+		    System.out.println("- " + course.courseName);
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
