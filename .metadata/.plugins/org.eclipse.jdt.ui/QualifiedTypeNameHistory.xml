@@ -6,7 +6,11 @@
     <fullyQualifiedTypeName name="com.sun.tools.javac.jvm.Items"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.awt.DisplayMode"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="customerOrderSystem.Order"/>
     <fullyQualifiedTypeName name="customerOrderSystem.Item"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="libraryAccountSystem.LibraryAccount"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>
