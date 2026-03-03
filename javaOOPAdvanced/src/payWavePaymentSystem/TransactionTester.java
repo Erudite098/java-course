@@ -13,23 +13,23 @@ public class TransactionTester {
 
         System.out.println("--- Starting Payment Tests ---");
 
-        /* --- Test Case 1: Successful Payments --- */
+        /* --- Successful Payments --- */
         testPayment(cc, 500, "Credit Card Normal Purchase");
         testPayment(ewallet, 200, "E-Wallet Coffee Purchase");
         testPayment(bank, 1500, "Bank Transfer Rent");
 
-        /* --- Test Case 2: Insufficient Funds --- */
+        /* --- Insufficient Funds --- */
         testPayment(ewallet, 5000, "E-Wallet Overdraw (Should Fail)");
         testPayment(bank, 3000, "Bank Overdraw (Should Fail)");
 
         System.out.println("\n--- Starting Refund Tests ---");
 
-        /* --- Test Case 3: Interface Checking (Polymorphism) --- */
-        processGenericRefund(cc, 200, "Credit Card");
-        processGenericRefund(bank, 500, "Bank Transfer");
+        /* --- Successful Refunds & Interface Checking --- */
+        testRefund(cc, 200, "Credit Card");
+        testRefund(bank, 500, "Bank Transfer");
         
         /* This would cause a compile error if we tried it with ewallet! */
-        // processGenericRefund(ewallet, 100); 
+        // testRefund(ewallet, 100); 
 
         System.out.println("\n--- Final States ---");
         System.out.println(cc.getPaymentDetails());
@@ -61,7 +61,7 @@ public class TransactionTester {
      * Last Updated: 2026-03-03  
      * Author: Kerzania  
      */
-    public static void processGenericRefund(Refundable ref, double amount, String description) {
+    public static void testRefund(Refundable ref, double amount, String description) {
         boolean success = ref.processRefund(amount);
         System.out.printf("(%s)[Refund] Amount: %.2f | Success: %b%n", description, amount, success);	
     }
