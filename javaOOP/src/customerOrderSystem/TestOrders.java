@@ -11,57 +11,57 @@ public class TestOrders {
 		Item item4 = new Item("Croissant", 6.75);
 		
 		// 2 orders for unspecified guests (no name provided)
-		Order order1 = new Order();
-		Order order2 = new Order();
+		Order guestCustomer1 = new Order();
+		Order guestCustomer2 = new Order();
 
 		// 3 orders with specific names using the overloaded constructor.
-		Order order3 = new Order("Alice");
-		Order order4 = new Order("Bob");
-		Order order5 = new Order("Charlie");
+		Order customer1 = new Order("Alice");
+		Order customer2 = new Order("Bob");
+		Order customer3 = new Order("Charlie");
 		
 		// 2 items to each order
-		order1.addItem(item1);
-		order1.addItem(item4);
+		guestCustomer1.addItem(item1);
+		guestCustomer1.addItem(item4);
 
-		order2.addItem(item3);
-		order2.addItem(item1);
+		guestCustomer2.addItem(item3);
+		guestCustomer2.addItem(item1);
 		
-		order3.addItem(item2);
-		order3.addItem(item4);
+		customer1.addItem(item2);
+		customer1.addItem(item4);
 		
-		order4.addItem(item4);
-		order4.addItem(item3);
+		customer2.addItem(item4);
+		customer2.addItem(item3);
 		
-		order5.addItem(item1);
-		order5.addItem(item2);
+		customer3.addItem(item1);
+		customer3.addItem(item2);
 		
 		// Set some orders to true
-		order1.setReady(false);
-		order2.setReady(true);
-		order3.setReady(false);
-		order4.setReady(true);
-		order5.setReady(true);
+		guestCustomer1.setReady(false);
+		guestCustomer2.setReady(true);
+		customer1.setReady(false);
+		customer2.setReady(true);
+		customer3.setReady(true);
 		
 		// Display order details, total order price and order status
-		order1.display();
-		System.out.println("Total: " + order1.getOrderTotal());
-		order1.getStatusMessage();
+		guestCustomer1.display();
+		System.out.println("Total: " + guestCustomer1.getOrderTotal());
+		guestCustomer1.getStatusMessage();
 		
-		order2.display();
-		System.out.println("Total: " + order2.getOrderTotal());
-		order2.getStatusMessage();
+		guestCustomer2.display();
+		System.out.println("Total: " + guestCustomer2.getOrderTotal());
+		guestCustomer2.getStatusMessage();
 		
-		order3.display();
-		System.out.println("Total: " + order3.getOrderTotal());
-		order3.getStatusMessage();
+		customer1.display();
+		System.out.println("Total: " + customer1.getOrderTotal());
+		customer1.getStatusMessage();
 		
-		order4.display();
-		System.out.println("Total: " + order4.getOrderTotal());
-		order4.getStatusMessage();
+		customer2.display();
+		System.out.println("Total: " + customer2.getOrderTotal());
+		customer2.getStatusMessage();
 		
-		order5.display();
-		System.out.println("Total: " + order5.getOrderTotal());
-		order5.getStatusMessage();
+		customer3.display();
+		System.out.println("Total: " + customer3.getOrderTotal());
+		customer3.getStatusMessage();
 	}
 
 }
