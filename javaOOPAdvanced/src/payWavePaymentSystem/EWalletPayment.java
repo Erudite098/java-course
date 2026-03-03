@@ -6,6 +6,11 @@ public class EWalletPayment implements PaymentMethod{
 	private String walletID;
 	private double balance;
 
+	public EWalletPayment(String walletID, int balance) {
+		this.walletID = walletID;
+		this.balance = balance;
+	}
+
 	@Override
 	public boolean processPayment(double amount) {
 		if (this.balance >= amount) {
@@ -17,7 +22,7 @@ public class EWalletPayment implements PaymentMethod{
 	
 	@Override
 	public String getPaymentDetails() {
-		String paymentDetails = String.format("EWallet [walletID = %s, balance = %d]", this.walletID, this.balance);
+		String paymentDetails = String.format("EWallet [walletID = %s, balance = %.2f]", this.walletID, this.balance);
 		return paymentDetails;
 	}
 	

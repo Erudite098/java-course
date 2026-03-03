@@ -7,9 +7,15 @@ public class CreditCardPayment implements PaymentMethod, Refundable {
 	private double creditLimit;
 	private double availableCredit;
 	
+	public CreditCardPayment(String cardNumber, int availableCredit) {
+		this.cardNumber = cardNumber;
+		this.availableCredit = availableCredit;
+		
+	}
+
 	@Override
 	public boolean processRefund(double amount) {
-		this.availableCredit = amount;
+		this.availableCredit += amount;
 		return true;
 	}
 	
@@ -25,7 +31,7 @@ public class CreditCardPayment implements PaymentMethod, Refundable {
 	
 	@Override
 	public String getPaymentDetails() {
-		String paymentDetails = String.format("CreditCard [cardNumber = %s, availableCredit = %d]", this.cardNumber, this.availableCredit);
+		String paymentDetails = String.format("CreditCard [cardNumber = %s, availableCredit = %.2f]", this.cardNumber, this.availableCredit);
 		return paymentDetails;
 	}
 }
