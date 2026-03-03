@@ -1,0 +1,6 @@
+package payWavePaymentSystem;
+
+public interface PaymentMethod {
+	 boolean processPayment(double amount);
+	 String getPaymentDetails();
+}
