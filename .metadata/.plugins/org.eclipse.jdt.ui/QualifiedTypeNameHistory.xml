@@ -12,8 +12,16 @@
     <fullyQualifiedTypeName name="libraryAccountSystem.LibraryAccount"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="robotFactory.WorkerBot"/>
     <fullyQualifiedTypeName name="robotFactory.Robot"/>
     <fullyQualifiedTypeName name="robotFactory.SecurityBot"/>
+    <fullyQualifiedTypeName name="payWavePaymentSystem.PaymentMethod"/>
+    <fullyQualifiedTypeName name="payWavePaymentSystem.Refundable"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="studentRecords.Person"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.debugger.win32.coff.TestDebugInfo"/>
+    <fullyQualifiedTypeName name="studentRecords.Displayable"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="studentRecords.Student"/>
 </qualifiedTypeNameHistroy>
